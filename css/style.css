@@ -1,0 +1,8 @@
+h1{
+    color: yellow;
+    background-color: black; 
+    width: 200px; 
+    border-radius: 10px;
+    font-size: 45px;
+    padding: 5px;
+}
