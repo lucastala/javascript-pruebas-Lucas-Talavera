@@ -31,25 +31,58 @@
 //     if (ingreso == "salir") alert("Gracias, que tengas un buen día");
 //   }
 
-function descuento(precio) {
-  if(isNaN(precio)){
-      return "El valor ingresado no es un numero";
-  }else{
-      return((precio*15)/100);
-  }
+// function descuento(precio) {
+//   if(isNaN(precio)){
+//       return "El valor ingresado no es un numero";
+//   }else{
+//       return((precio*15)/100);
+//   }
   
-} 
+// } 
 
 
-function preciototaldelproducto(precio, descuento){
-  return (precio - descuento);
-} 
+// function preciototaldelproducto(precio, descuento){
+//   return (precio - descuento);
+// } 
 
 
-let precio= prompt("ingrese el precio del producto"); 
-precio = parseFloat(precio);
+// let precio= prompt("ingrese el precio del producto"); 
+// precio = parseFloat(precio);
 
-let valorDescuento = descuento(precio);
-let preciofinal = preciototaldelproducto(precio, valorDescuento);
-alert("Felicitaciones, se aplico el descuento. Precio a abonar: "+ preciofinal);
+// let valorDescuento = descuento(precio);
+// let preciofinal = preciototaldelproducto(precio, valorDescuento);
+// alert("Felicitaciones, se aplico el descuento. Precio abonar: "+ preciofinal);  
+
+function ingresarproducto() {
+    let nombredelproducto=prompt("ingrese nombre del producto") 
+    let preciodelproducto=prompt("ingrese el precio del producto") 
+    let producto= {
+        nombre:nombredelproducto, 
+        precio: Number(preciodelproducto) 
+    }   
+    return producto
+}
+let ingreso
+let carrito=[] 
+let preciodelcarrito=0
+do  { 
+    ingreso=Number(prompt())
+    switch (ingreso) {
+        case 1: 
+        let producto=ingresarproducto() 
+        carrito.push(producto) 
+        preciodelcarrito= preciodelcarrito + producto.precio
+        break;
+        
+        default:
+            break; 
+            
+        } 
+    }    while (ingreso !=0) 
+    console.log(carrito); 
+    console.log(preciodelcarrito);
+
+
+
+
  
