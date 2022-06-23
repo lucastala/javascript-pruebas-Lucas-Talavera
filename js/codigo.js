@@ -13,17 +13,20 @@ for (let i = 0; i < famosos.length; i++) {
     const famoso = famosos[i];
     var tmp = document.createElement('div');
     let html = `
-        <div class="sinbotones" >
+        <div class="sinbotones" > 
             <img class="imagen" src="../img/${famoso.imagen}" alt=""> 
             <h2 style="text-align: center;" >${famoso.nombre}</h2>
             <div class="cardtext">
-                <p class="precio">$${famoso.precio}</p> 
-                <p class="porcentaje">Fama:${famoso.nivelDeFama}</p>
+                <p class="precio">$ ${famoso.precio}</p> 
+                <p class="porcentaje">Fama: ${famoso.nivelDeFama}</p>
             </div>
             
+        </div> 
+        <div div>
+        <div class= "divbuttoncard">
+            <button class="buttoncard" >-</button> 
+            <button class="buttoncard" >+</button> 
         </div>
-        <button class="button-64" >-</button> 
-        <button class="button-64" >+</button> 
     `;
     tmp.innerHTML = html;
     tmp.className="gridelement"
