@@ -20,8 +20,8 @@
         <section>
             <div class= "headder" >
                 <h1>Feria Americana</h1>  
-                <input  class="buscador" id="buscador" type="search" placeholder="Ingrese el producto que desea buscar" > 
-                <label  class="labelbuscador" for="buscador"> <i class="fa-solid fa-magnifying-glass"></i></label>
+                <input oninput="buscar()"  class="buscador" id="buscador" type="search" placeholder="Ingrese el producto que desea buscar" > 
+                <button onclick="buscar()"  class="lupita" ><i class="fa-solid fa-magnifying-glass"></i></button>
                 <ul class="menubar" >
                     <button class="button" ><a href="">Inicio</a></button> 
                     <button class="button" ><a href="">Venta</a></button>
@@ -30,13 +30,14 @@
                 </ul>  
             </div>
         </section> 
-    </header> 
+    </header>  
+    <div>
+        <button id="cargadorDeProductos" class="cargadorDeProducto" >Cargar producto</button>
+    </div>
     <section>
         <h3 class="catalogo" >Catalogo</h3>
-        <div id="grid" class="wrapper">
-    </section>
-        
-    </div>
+        <div id="contenedorDeFamosos" class="wrapper"></div>            
+    </section> 
     <script src="./js/codigo.js"></script>  
 </body>
 </html> 
